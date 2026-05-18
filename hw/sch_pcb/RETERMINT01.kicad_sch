@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "59efffd7-67f6-4f62-bd32-5440b33a3eb3")
 	(paper "A3")
+	(title_block
+		(title "RETERMINT01 – RETERMINAL DM Interface Board")
+		(date "2026-05-18")
+		(rev "A")
+		(company "MLAB")
+	)
 	(lib_symbols
 		(symbol "Connector:Barrel_Jack_Switch"
 			(pin_names
@@ -14292,7 +14298,7 @@
 		)
 	)
 	(symbol
-		(lib_id "GPS02A-rescue:D_Zener-Device")
+		(lib_id "GPS02A-rescue:D-Device")
 		(at 26.67 83.82 90)
 		(unit 1)
 		(exclude_from_sim no)
