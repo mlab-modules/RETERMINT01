@@ -1,42 +1,29 @@
 # RETERMINT01 – RETERMINAL DM Interface Board
 
-MLAB expansion module providing galvanically isolated industrial interfaces and an isolated power supply for the **reTerminal DM** terminal by Seeed Studio.
-
 | Top side | Bottom side |
 |:---:|:---:|
 | ![Top](doc/gen/img/RETERMINT01-top.png) | ![Bottom](doc/gen/img/RETERMINT01-bottom.png) |
 
+RETERMINT01 je rozšiřující deska pro [reTerminal DM](https://wiki.seeedstudio.com/reterminal-dm/) od Seeed Studio. Deska přidává galvanicky oddělené průmyslové rozhraní — **3× RS-485** sběrnici, **izolovaný 24 V zdroj** a možnost softwarového **vypnutí napájení vzdáleného zařízení** přes GPIO. Veškerá komunikace na sběrnicové straně je plně galvanicky oddělena od logiky reTerminal DM.
+
+Deska se připojuje přímo na 40pinový GPIO konektor reTerminal DM.
+
 ## Features
 
-- **3× RS-485** – galvanically isolated half-duplex channels (ADM2483xRW), up to 500 kbps
-- **u-blox NEO-M9N GPS** – with u.FL antenna connector, USB configuration port and 1 F supercapacitor backup
-- **Isolated 24 V DC/DC** – 30 W Traco Power THN 30-2423WI, software-controllable enable (default OFF)
-- **5 V power module** – TI TPSM33606S5, powers the isolated RS-485 bus side
-- **RJ45 with LEDs** – shielded, for RS-485 field bus connection
-- **40-pin Raspberry Pi connector** – plugs directly onto reTerminal DM GPIO header
-- **ESD & overvoltage protection** – SM712 TVS on every RS-485 channel, USBLC6-2SC6 on GPS USB
-- **2× 1 A blade fuse** – on 24 V input paths
+- **3× RS-485** – galvanicky oddělené half-duplex kanály (ADM2483xRW), až 500 kbps
+- **Izolovaný 24 V DC/DC** – 30 W Traco Power THN 30-2423WI, softwarově spínatelný (default OFF)
+- **Vzdálené vypnutí napájení** – výstup PS1 lze ovládat GPIO signálem `PWR_OFF` (active LOW)
+- **5 V power module** – TI TPSM33606S5, napájí izolovanou stranu RS-485
+- **u-blox NEO-M9N GPS** – s u.FL anténním konektorem, USB konfiguračním portem a zálohou 1 F superkondenzátorem
+- **RJ45 se štítem a LED** – pro připojení RS-485 průmyslové sběrnice
+- **ESD & přepěťová ochrana** – SM712 TVS na každém RS-485 kanálu, USBLC6-2SC6 na GPS USB
+- **2× 1 A pojistka** – na 24 V vstupech
 
-## Block Diagram
+## Schematic
 
-```
-                    ┌─────────────────────────────────────────┐
-                    │             RETERMINT01                 │
-                    │                                         │
-  24 V DC ──────────┤ F1/F2 ─► PS1 (isolated) ─► 24V_OUT   │
-  (Barrel J2)       │              ▲ enable       │           │
-                    │          Q1 ─┘          TPSM33606       │
-                    │         PWR_OFF (GPIO)   └► 5V_OUT      │
-                    │                                │         │
-   RPi 40-pin       │  3V3 ─► ADM2483 (×3) ◄── 5V_OUT       │
-   (J10) ◄──────────┤         A/B ── SM712 ─► RJ45 (J11)    │
-                    │                                         │
-                    │  3V3_GPS ◄── MIC5504                   │
-                    │  NEO-M9N GPS ◄── 3V3_GPS               │
-                    │  C1 (1F supercap) ─► VBACKUP           │
-                    │  J8 u.FL ─► GPS antenna                │
-                    └─────────────────────────────────────────┘
-```
+[![Schematic](doc/gen/RETERMINT01-schematic.svg)](doc/gen/RETERMINT01-schematic.pdf)
+
+KiCad source files are in `hw/sch_pcb/`.
 
 ## Connectors
 
@@ -90,12 +77,6 @@ Three isolated RS-485 channels (U5, U6, U7) are brought out via the RJ45 connect
 
 Full PCB stats: [`doc/gen/README.md`](doc/gen/README.md)
 
-## Schematic
-
-📄 [`doc/gen/RETERMINT01-schematic.pdf`](doc/gen/RETERMINT01-schematic.pdf)
-
-KiCad source files are in `hw/sch_pcb/`.
-
 ## Key Components
 
 | Ref | Part | Description |
@@ -108,7 +89,3 @@ KiCad source files are in `hw/sch_pcb/`.
 | PS1 | Traco THN 30-2423WI | 30 W isolated DC/DC, wide input |
 | C1  | 1 F supercap | GPS VBACKUP |
 | D4, D5, D7 | Littelfuse SM712 | RS-485 TVS protection |
-
-## License
-
-[CERN OHL v2 – Permissive](https://ohwr.org/cern_ohl_p_v2.txt)
