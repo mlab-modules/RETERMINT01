@@ -1,6 +1,6 @@
 # PCB
 
-Board size: 74.0x119.5 mm (2.91x4.7 inches)
+Board size: 89.6x119.5 mm (3.53x4.7 inches)
 
 - This is the size of the rectangle that contains the board
 - Thickness: 1.6 mm (63 mils)
@@ -37,7 +37,7 @@ Via: 0.6/0.3 mm (24/12 mils)
 - By design rules: 0.5/0.3 mm (20/12 mils)
 - Micro via: yes [0.2/0.1 mm (8/4 mils)]
 - Buried/blind via: yes
-- Total: 105 (thru: 105 buried/blind: 0 micro: 0)
+- Total: 107 (thru: 107 buried/blind: 0 micro: 0)
 
 Outer Annular Ring: 0.1 mm (4 mils)
 
@@ -51,8 +51,8 @@ Eurocircuits class: 6C
 
 Components count: (SMD/THT)
 
-- Top: 54/18 (SMD + THT)
-- Bottom: 0/1 (THT)
+- Top: 58/17 (SMD + THT)
+- Bottom: 0/2 (THT)
 
 Defined tracks:
 
@@ -65,8 +65,8 @@ Defined tracks:
 Used tracks:
 
 - 0.2 mm (8 mils) (6) defined: yes
-- 0.3 mm (12 mils) (92) defined: yes
-- 0.4 mm (16 mils) (235) defined: yes
+- 0.3 mm (12 mils) (103) defined: yes
+- 0.4 mm (16 mils) (244) defined: yes
 - 0.7 mm (28 mils) (1) defined: no
 - 0.8 mm (31 mils) (40) defined: yes
 
@@ -75,7 +75,7 @@ Defined vias:
 
 Used vias:
 
-- 0.6/0.3 mm (24/12 mils) (Count: 105, Aspect: 2.7 A) defined: no
+- 0.6/0.3 mm (24/12 mils) (Count: 107, Aspect: 2.7 A) defined: no
 
 Holes (excluding vias):
 
@@ -95,7 +95,7 @@ Oval holes:
 
 Drill tools (including vias and computing adjusts and rounding):
 
-- 0.4 mm (16 mils) (105)
+- 0.4 mm (16 mils) (107)
 - 0.9 mm (35 mils) (2)
 - 1.0 mm (39 mils) (32)
 - 1.1 mm (43 mils) (56)
@@ -114,7 +114,7 @@ The stencil thickness is  0.12 mm.
 
 | Side   | Pads with paste | Area [mm²] | Paste [g] |
 |--------|-----------------|------------|-----------|
-| Total  |             195 |     271.32 |      1.35 |
+| Total  |             203 |     282.33 |      1.41 |
 
 Note: this is just an approximation to the theoretical value. Margins of the solder mask and waste aren't computed.
 
