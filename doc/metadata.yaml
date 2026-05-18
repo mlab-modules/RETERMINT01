@@ -1,6 +1,12 @@
-description: null
+description: 'RETERMINT01 is an interface board for the reTerminal DM by Seeed Studio.
+  It adds a galvanically isolated industrial interface RS-485 bus, isolated 24 V power
+  supply and the ability to remotely switch off the power of a connected field device
+  via GPIO. '
 github_branch: RETERMINT01A
-github_description: null
+github_description: 'RETERMINT01 is an interface board for the reTerminal DM by Seeed
+  Studio. It adds a galvanically isolated industrial interface RS-485 bus, isolated
+  24 V power supply and the ability to remotely switch off the power of a connected
+  field device via GPIO. '
 github_repo: RETERMINT01
 github_url: https://github.com/ust-modules/RETERMINT01
 homepage: false
@@ -19,5 +25,9 @@ status: 0
 tags:
 - interface
 - reterminal
+- kicad
+- mlab
+- mlab-module
+- pcb
 title: RETERMINT01
-updated: '2026-05-18T11:33:28.108327+00:00'
+updated: '2026-05-18T12:24:41.076460+00:00'

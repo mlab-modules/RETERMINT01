@@ -5,4 +5,7 @@ eda:
   type: kicad
 gerbers: hw/cam_profi/
 site: https://github.com/ust-modules/RETERMINT01
-summary: null
+summary: 'RETERMINT01 is an interface board for the reTerminal DM by Seeed Studio.
+  It adds a galvanically isolated industrial interface RS-485 bus, isolated 24 V power
+  supply and the ability to remotely switch off the power of a connected field device
+  via GPIO. '
