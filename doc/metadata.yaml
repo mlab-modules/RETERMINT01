@@ -13,10 +13,11 @@ images:
 - doc/gen/img/RETERMINT01-bottom.svg
 - doc/gen/img/RETERMINT01-top.svg
 mark: 50
+mod_ibom: hw/cam_profi/RETERMINT01-ibom.html
 mod_scheme: doc/gen/RETERMINT01-schematic.pdf
 status: 0
 tags:
 - interface
 - reterminal
 title: RETERMINT01
-updated: '2026-05-18T09:26:49.928210+00:00'
+updated: '2026-05-18T09:29:26.596972+00:00'
