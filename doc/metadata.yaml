@@ -2,7 +2,7 @@ description: null
 github_branch: RETERMINT01A
 github_description: null
 github_repo: RETERMINT01
-github_url: https://github.com/mlab-modules/RETERMINT01
+github_url: https://github.com/ust-modules/RETERMINT01
 homepage: false
 images:
 - doc/gen/img/RETERMINT01-top.png
@@ -15,6 +15,8 @@ images:
 mark: 50
 mod_scheme: doc/gen/RETERMINT01-schematic.pdf
 status: 0
-tags: []
+tags:
+- interface
+- reterminal
 title: RETERMINT01
-updated: '2026-05-16T02:44:57.610865+00:00'
+updated: '2026-05-18T09:26:49.928210+00:00'
