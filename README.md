@@ -1,8 +1,9 @@
 # RETERMINT01 – RETERMINAL DM Interface Board
 
-| Top side | Bottom side |
-|:---:|:---:|
-| ![Top](doc/gen/img/RETERMINT01-top.png) | ![Bottom](doc/gen/img/RETERMINT01-bottom.png) |
+<div align="center">
+  <img src="doc/gen/img/RETERMINT01-top.png" width="48%" alt="Top side" />
+  <img src="doc/gen/img/RETERMINT01-bottom.png" width="48%" alt="Bottom side" />
+</div>
 
 RETERMINT01 je rozšiřující deska pro [reTerminal DM](https://wiki.seeedstudio.com/reterminal-dm/) od Seeed Studio. Deska přidává galvanicky oddělené průmyslové rozhraní — **3× RS-485** sběrnici, **izolovaný 24 V zdroj** a možnost softwarového **vypnutí napájení vzdáleného zařízení** přes GPIO. Veškerá komunikace na sběrnicové straně je plně galvanicky oddělena od logiky reTerminal DM.
 
