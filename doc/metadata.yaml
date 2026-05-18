@@ -1,0 +1,20 @@
+description: null
+github_branch: RETERMINT01A
+github_description: null
+github_repo: RETERMINT01
+github_url: https://github.com/mlab-modules/RETERMINT01
+homepage: false
+images:
+- doc/gen/img/RETERMINT01-top.png
+- doc/gen/img/RETERMINT01-bottom.png
+- hw/cam_profi/assembly/RETERMINT01-assembly_page_02.svg
+- hw/cam_profi/assembly/RETERMINT01-assembly_page_01.svg
+- doc/gen/RETERMINT01-schematic.svg
+- doc/gen/img/RETERMINT01-bottom.svg
+- doc/gen/img/RETERMINT01-top.svg
+mark: 50
+mod_scheme: doc/gen/RETERMINT01-schematic.pdf
+status: 0
+tags: []
+title: RETERMINT01
+updated: '2026-05-16T02:44:57.610865+00:00'
