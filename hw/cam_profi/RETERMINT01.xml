@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/github/workspace/hw/sch_pcb/RETERMINT01.kicad_sch</source>
-    <date>2026-05-27T08:39:21</date>
+    <date>2026-05-31T19:35:37</date>
     <tool>Eeschema 10.0.1-10.0.1~ubuntu25.10.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -60,7 +60,7 @@
       </units>
     </comp>
     <comp ref="C2">
-      <value>1u</value>
+      <value>1uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <description>Unpolarized capacitor, small symbol</description>
       <fields>
@@ -69,6 +69,7 @@
         <field name="category"/>
         <field name="name"/>
         <field name="symbol"/>
+        <field name="UST_ID">5c70984712875079b91f8b50</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description">Unpolarized capacitor, small symbol</field>
@@ -79,6 +80,7 @@
       <property name="category" value=""/>
       <property name="name" value=""/>
       <property name="symbol" value=""/>
+      <property name="UST_ID" value="5c70984712875079b91f8b50"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RETERMINT01.kicad_sch"/>
       <property name="ki_keywords" value="capacitor cap"/>
@@ -95,7 +97,7 @@
       </units>
     </comp>
     <comp ref="C3">
-      <value>100n</value>
+      <value>100nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <description>Unpolarized capacitor, small symbol</description>
       <fields>
@@ -104,6 +106,7 @@
         <field name="category"/>
         <field name="name"/>
         <field name="symbol"/>
+        <field name="UST_ID">5c70984712875079b91f8b4c</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description">Unpolarized capacitor, small symbol</field>
@@ -114,6 +117,7 @@
       <property name="category" value=""/>
       <property name="name" value=""/>
       <property name="symbol" value=""/>
+      <property name="UST_ID" value="5c70984712875079b91f8b4c"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RETERMINT01.kicad_sch"/>
       <property name="ki_keywords" value="capacitor cap"/>
@@ -130,7 +134,7 @@
       </units>
     </comp>
     <comp ref="C4">
-      <value>1u</value>
+      <value>1uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <description>Unpolarized capacitor, small symbol</description>
       <fields>
@@ -139,6 +143,7 @@
         <field name="category"/>
         <field name="name"/>
         <field name="symbol"/>
+        <field name="UST_ID">5c70984712875079b91f8b50</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description">Unpolarized capacitor, small symbol</field>
@@ -149,6 +154,7 @@
       <property name="category" value=""/>
       <property name="name" value=""/>
       <property name="symbol" value=""/>
+      <property name="UST_ID" value="5c70984712875079b91f8b50"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RETERMINT01.kicad_sch"/>
       <property name="ki_keywords" value="capacitor cap"/>
@@ -375,7 +381,7 @@
       </units>
     </comp>
     <comp ref="C11">
-      <value>1u</value>
+      <value>1uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <description>Unpolarized capacitor, small symbol</description>
       <fields>
@@ -384,6 +390,7 @@
         <field name="category"/>
         <field name="name"/>
         <field name="symbol"/>
+        <field name="UST_ID">5c70984712875079b91f8b50</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description">Unpolarized capacitor, small symbol</field>
@@ -394,6 +401,7 @@
       <property name="category" value=""/>
       <property name="name" value=""/>
       <property name="symbol" value=""/>
+      <property name="UST_ID" value="5c70984712875079b91f8b50"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RETERMINT01.kicad_sch"/>
       <property name="ki_keywords" value="capacitor cap"/>
@@ -410,7 +418,7 @@
       </units>
     </comp>
     <comp ref="C12">
-      <value>100n</value>
+      <value>100nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <description>Unpolarized capacitor, small symbol</description>
       <fields>
@@ -419,6 +427,7 @@
         <field name="category"/>
         <field name="name"/>
         <field name="symbol"/>
+        <field name="UST_ID">5c70984712875079b91f8b4c</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description">Unpolarized capacitor, small symbol</field>
@@ -429,6 +438,7 @@
       <property name="category" value=""/>
       <property name="name" value=""/>
       <property name="symbol" value=""/>
+      <property name="UST_ID" value="5c70984712875079b91f8b4c"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RETERMINT01.kicad_sch"/>
       <property name="ki_keywords" value="capacitor cap"/>
@@ -671,6 +681,7 @@
         <field name="category"/>
         <field name="name"/>
         <field name="symbol"/>
+        <field name="UST_ID">?</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
         <field name="Datasheet">https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diode_arrays/littelfuse_tvs_diode_array_sm712_datasheet.pdf.pdf</field>
         <field name="Description">7V/12V, 600W Asymmetrical TVS Diode Array, SOT-23</field>
@@ -681,6 +692,7 @@
       <property name="category" value=""/>
       <property name="name" value=""/>
       <property name="symbol" value=""/>
+      <property name="UST_ID" value="?"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RETERMINT01.kicad_sch"/>
       <property name="ki_keywords" value="transient voltage suppressor thyrector transil"/>
@@ -1076,6 +1088,7 @@
         <field name="category"/>
         <field name="name"/>
         <field name="symbol"/>
+        <field name="UST_ID">5ed7ac8e12875004e15a62c8</field>
         <field name="Footprint">Connector_Coaxial:U.FL_Molex_MCRF_73412-0110_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description">small coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)</field>
@@ -1086,6 +1099,7 @@
       <property name="category" value=""/>
       <property name="name" value=""/>
       <property name="symbol" value=""/>
+      <property name="UST_ID" value="5ed7ac8e12875004e15a62c8"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RETERMINT01.kicad_sch"/>
       <property name="ki_keywords" value="BNC SMA SMB SMC LEMO coaxial connector CINCH RCA MCX MMCX U.FL UMRF"/>
@@ -1752,7 +1766,7 @@
       <value>1k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <fields>
-        <field name="UST_ID"/>
+        <field name="UST_ID">5c70984512875079b91f898c</field>
         <field name="MFPN"/>
         <field name="NIID"/>
         <field name="category"/>
@@ -1763,7 +1777,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="UST_ID" value=""/>
+      <property name="UST_ID" value="5c70984512875079b91f898c"/>
       <property name="MFPN" value=""/>
       <property name="NIID" value=""/>
       <property name="category" value=""/>
@@ -1788,7 +1802,7 @@
       <value>10k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <fields>
-        <field name="UST_ID"/>
+        <field name="UST_ID">5c70984612875079b91f899f</field>
         <field name="MFPN"/>
         <field name="NIID"/>
         <field name="category"/>
@@ -1799,7 +1813,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="GPS02A-rescue" part="R-Device" description=""/>
-      <property name="UST_ID" value=""/>
+      <property name="UST_ID" value="5c70984612875079b91f899f"/>
       <property name="MFPN" value=""/>
       <property name="NIID" value=""/>
       <property name="category" value=""/>
@@ -1823,7 +1837,7 @@
       <value>10k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <fields>
-        <field name="UST_ID"/>
+        <field name="UST_ID">5c70984612875079b91f899f</field>
         <field name="MFPN"/>
         <field name="NIID"/>
         <field name="category"/>
@@ -1834,7 +1848,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="GPS02A-rescue" part="R-Device" description=""/>
-      <property name="UST_ID" value=""/>
+      <property name="UST_ID" value="5c70984612875079b91f899f"/>
       <property name="MFPN" value=""/>
       <property name="NIID" value=""/>
       <property name="category" value=""/>
@@ -2884,7 +2898,7 @@
       <value>NEO-M9N</value>
       <footprint>RF_GPS:ublox_NEO</footprint>
       <fields>
-        <field name="UST_ID"/>
+        <field name="UST_ID">5fa0faaf12875025b3977985</field>
         <field name="MFPN"/>
         <field name="NIID"/>
         <field name="category"/>
@@ -2895,7 +2909,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="GPS02A-rescue" part="NEO-M8P-RF_GPS" description=""/>
-      <property name="UST_ID" value=""/>
+      <property name="UST_ID" value="5fa0faaf12875025b3977985"/>
       <property name="MFPN" value=""/>
       <property name="NIID" value=""/>
       <property name="category" value=""/>
