@@ -592,7 +592,7 @@
       "svg": "",
       "vrml": ""
     },
-    "page_layout_descr_file": ""
+    "page_layout_descr_file": "../../doc/assets/templates/KiCAD/page_layout.kicad_wks"
   },
   "schematic": {
     "annotate_start_num": 0,
@@ -637,19 +637,19 @@
           "group_by": true,
           "label": "DNP",
           "name": "${DNP}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
           "label": "Exclude from BOM",
           "name": "${EXCLUDE_FROM_BOM}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
           "label": "Exclude from Board",
           "name": "${EXCLUDE_FROM_BOARD}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
@@ -661,7 +661,7 @@
           "group_by": false,
           "label": "Datasheet",
           "name": "Datasheet",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
@@ -703,7 +703,7 @@
           "group_by": false,
           "label": "UST_ID",
           "name": "UST_ID",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,

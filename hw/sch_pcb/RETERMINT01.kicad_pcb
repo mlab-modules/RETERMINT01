@@ -2443,7 +2443,7 @@
 				)
 			)
 		)
-		(property "UST_ID" ""
+		(property "UST_ID" "5c70984512875079b91f898c"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3354,7 +3354,7 @@
 				)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "100nF"
 			(at 0 1.679999 0)
 			(layer "F.Fab")
 			(uuid "1adaca7f-e10b-43e5-95be-02bda4cdbb5f")
@@ -3447,6 +3447,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "afd67e40-738e-403f-9e59-b3d3437f7d4a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "UST_ID" "5c70984712875079b91f8b4c"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "20bb3da1-c4dc-43ab-a484-f730c8905e64")
 			(effects
 				(font
 					(size 1 1)
@@ -6428,7 +6441,7 @@
 				)
 			)
 		)
-		(property "UST_ID" ""
+		(property "UST_ID" "5c70984612875079b91f899f"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6621,7 +6634,7 @@
 				)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "1uF"
 			(at 0 1.68 0)
 			(layer "F.Fab")
 			(uuid "9ae64d23-a3ec-44f9-b5a7-511edd0f02d8")
@@ -6714,6 +6727,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "209685e6-ad71-4177-8c00-c4e30c3a11e8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "UST_ID" "5c70984712875079b91f8b50"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "99f2f57d-a0b0-4f74-96df-762f2318fe0d")
 			(effects
 				(font
 					(size 1 1)
@@ -10464,7 +10490,7 @@
 				)
 			)
 		)
-		(property "UST_ID" ""
+		(property "UST_ID" "5c70984612875079b91f899f"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13638,7 +13664,7 @@
 				)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "1uF"
 			(at 0 1.679999 90)
 			(layer "F.Fab")
 			(uuid "4766ab5f-47cb-422d-b387-7ffe105b5755")
@@ -13731,6 +13757,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8d23b2b0-2aef-4cb6-9363-be265a244fd7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "UST_ID" "5c70984712875079b91f8b50"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ff731243-59b5-4b54-8b15-8530300a56d0")
 			(effects
 				(font
 					(size 1 1)
@@ -14203,7 +14242,7 @@
 				)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "100nF"
 			(at 0 1.679999 0)
 			(layer "F.Fab")
 			(uuid "942582ed-a2d4-4c61-8ad3-569644ea0b8b")
@@ -14296,6 +14335,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "18d62e80-f83f-4bd4-a72f-f2e58053994e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "UST_ID" "5c70984712875079b91f8b4c"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "13cd9505-2709-4976-b5b3-e71334b6c625")
 			(effects
 				(font
 					(size 1 1)
@@ -16521,6 +16573,19 @@
 				)
 			)
 		)
+		(property "UST_ID" "?"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2c10a4d3-f95b-4971-bb2a-1bcebaf19c25")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "SOT?23*")
 		(path "/59b8428f-24ef-4257-9ac1-a2cdcc4056c7")
 		(sheetname "/")
@@ -17289,7 +17354,7 @@
 				)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "1uF"
 			(at 0 1.679999 0)
 			(layer "F.Fab")
 			(uuid "845892d8-010c-49ad-936e-fe1cc08f202a")
@@ -17382,6 +17447,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a28bd0e3-adca-4952-8479-d36517e1ef9e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "UST_ID" "5c70984712875079b91f8b50"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e728d50d-3265-452b-bbcc-c0a0c35f261f")
 			(effects
 				(font
 					(size 1 1)
@@ -18871,7 +18949,7 @@
 				)
 			)
 		)
-		(property "UST_ID" ""
+		(property "UST_ID" "5fa0faaf12875025b3977985"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19521,6 +19599,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2a7a9ee0-640d-4e7e-8e5b-a4ed9523f068")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "UST_ID" "5ed7ac8e12875004e15a62c8"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5c8b6f28-3791-4f2b-913f-a137af8559dc")
 			(effects
 				(font
 					(size 1 1)
@@ -29311,6 +29402,54 @@
 		(uuid "b828f6d9-6c19-4613-90c5-ec7828b928f8")
 	)
 	(segment
+		(start 69 96.8)
+		(end 69 82.31)
+		(width 0.3)
+		(layer "F.Cu")
+		(net "/PWR_ON")
+		(uuid "2dea5840-d0d5-470e-8fc6-eafe465a0bfd")
+	)
+	(segment
+		(start 78.4 106.2)
+		(end 69 96.8)
+		(width 0.3)
+		(layer "F.Cu")
+		(net "/PWR_ON")
+		(uuid "34ad6e35-e2f8-41da-baee-b96e70f0e06a")
+	)
+	(segment
+		(start 82.175 120.3)
+		(end 81.2 120.3)
+		(width 0.3)
+		(layer "F.Cu")
+		(net "/PWR_ON")
+		(uuid "4c0100e6-99d7-462a-a0a1-b4821ebbe3b4")
+	)
+	(segment
+		(start 69 82.31)
+		(end 67.725 81.035)
+		(width 0.3)
+		(layer "F.Cu")
+		(net "/PWR_ON")
+		(uuid "69bb0ca8-0476-4ead-81e5-8eaf4a799f4b")
+	)
+	(segment
+		(start 78.4 117.5)
+		(end 78.4 106.2)
+		(width 0.3)
+		(layer "F.Cu")
+		(net "/PWR_ON")
+		(uuid "ba35aed4-a0fe-4091-b1d3-bdfb8680a16b")
+	)
+	(segment
+		(start 81.2 120.3)
+		(end 78.4 117.5)
+		(width 0.3)
+		(layer "F.Cu")
+		(net "/PWR_ON")
+		(uuid "eac14bc5-115b-49dc-b417-51ba22f2134c")
+	)
+	(segment
 		(start 84 118.2125)
 		(end 84.0125 118.2)
 		(width 0.4)
@@ -31479,54 +31618,6 @@
 		(layer "F.Cu")
 		(net "Net-(Q2-B)")
 		(uuid "a6f30954-7049-4163-924e-a8c8821bbb41")
-	)
-	(segment
-		(start 69 96.8)
-		(end 69 82.31)
-		(width 0.3)
-		(layer "F.Cu")
-		(net "/PWR_ON")
-		(uuid "2dea5840-d0d5-470e-8fc6-eafe465a0bfd")
-	)
-	(segment
-		(start 78.4 106.2)
-		(end 69 96.8)
-		(width 0.3)
-		(layer "F.Cu")
-		(net "/PWR_ON")
-		(uuid "34ad6e35-e2f8-41da-baee-b96e70f0e06a")
-	)
-	(segment
-		(start 82.175 120.3)
-		(end 81.2 120.3)
-		(width 0.3)
-		(layer "F.Cu")
-		(net "/PWR_ON")
-		(uuid "4c0100e6-99d7-462a-a0a1-b4821ebbe3b4")
-	)
-	(segment
-		(start 69 82.31)
-		(end 67.725 81.035)
-		(width 0.3)
-		(layer "F.Cu")
-		(net "/PWR_ON")
-		(uuid "69bb0ca8-0476-4ead-81e5-8eaf4a799f4b")
-	)
-	(segment
-		(start 78.4 117.5)
-		(end 78.4 106.2)
-		(width 0.3)
-		(layer "F.Cu")
-		(net "/PWR_ON")
-		(uuid "ba35aed4-a0fe-4091-b1d3-bdfb8680a16b")
-	)
-	(segment
-		(start 81.2 120.3)
-		(end 78.4 117.5)
-		(width 0.3)
-		(layer "F.Cu")
-		(net "/PWR_ON")
-		(uuid "eac14bc5-115b-49dc-b417-51ba22f2134c")
 	)
 	(zone
 		(net "GND_GPS")
