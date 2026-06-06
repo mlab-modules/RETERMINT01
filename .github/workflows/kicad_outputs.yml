@@ -48,8 +48,9 @@ jobs:
           print(json.dumps(matrix))
           ")
           else
-            REPO="${{ github.event.repository.name }}"
-            MATRIX="{\"include\":[{\"name\":\"$REPO\",\"dir\":\"hw/sch_pcb\",\"schema\":\"hw/sch_pcb/$REPO.kicad_sch\",\"board\":\"hw/sch_pcb/$REPO.kicad_pcb\"}]}"
+            PCB=$(find hw/sch_pcb -maxdepth 1 -name "*.kicad_pcb" | head -1)
+            NAME=$(basename "$PCB" .kicad_pcb)
+            MATRIX="{\"include\":[{\"name\":\"$NAME\",\"dir\":\"hw/sch_pcb\",\"schema\":\"hw/sch_pcb/$NAME.kicad_sch\",\"board\":\"hw/sch_pcb/$NAME.kicad_pcb\"}]}"
           fi
           echo "matrix=$MATRIX" >> $GITHUB_OUTPUT
 
