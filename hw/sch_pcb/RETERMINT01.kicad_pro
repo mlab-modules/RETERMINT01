@@ -108,14 +108,6 @@
         [
           "silk_edge_clearance|77742500|159500000|bc5d9a5f-efbc-4f51-8d60-05393957bfb3|2a6c70ad-d986-4016-acc7-503aad369126",
           ""
-        ],
-        [
-          "starved_thermal|70265000|68335000|5216581d-8616-45e7-a900-c11eca3590c3|f7557e56-c480-43ff-bab1-72a77cd5c7f9|F.Cu",
-          ""
-        ],
-        [
-          "unconnected_items|140564667|138500500|F.Cu|4|5216581d-8616-45e7-a900-c11eca3590c3|5216581d-8616-45e7-a900-c11eca3590c3",
-          ""
         ]
       ],
       "meta": {
@@ -798,7 +790,7 @@
         "uuid": "59efffd7-67f6-4f62-bd32-5440b33a3eb3"
       }
     ],
-    "used_designators": "",
+    "used_designators": "R26-27,Q3,D9,C13-18,#PWR70-86",
     "variants": []
   },
   "sheets": [
