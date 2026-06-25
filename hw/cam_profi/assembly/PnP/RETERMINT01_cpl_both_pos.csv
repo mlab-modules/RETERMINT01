@@ -11,6 +11,12 @@ Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
 "C10","47pF","C_0805_2012Metric",12.9424,104.9092,-90.0000,top
 "C11","1uF","C_0805_2012Metric",7.3000,8.1000,180.0000,top
 "C12","100nF","C_0805_2012Metric",7.3500,10.2000,180.0000,top
+"C13","100nF","C_0805_2012Metric",35.1000,44.2500,90.0000,top
+"C14","100nF","C_0805_2012Metric",2.0000,31.9500,-90.0000,top
+"C15","100nF","C_0805_2012Metric",24.4000,44.1000,90.0000,top
+"C16","100nF","C_0805_2012Metric",24.5000,27.8500,-90.0000,top
+"C17","100nF","C_0805_2012Metric",13.5000,44.0500,90.0000,top
+"C18","100nF","C_0805_2012Metric",34.8000,26.9500,-90.0000,top
 "D1","M4","D_SMA",18.5258,82.0000,-90.0000,top
 "D2","M4","D_SMA",26.4258,97.2575,-90.0000,top
 "D3","RED","LED_1206_3216Metric",32.4000,79.0000,0.0000,top
@@ -22,7 +28,7 @@ Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
 "F1","1A","Fuse_0805_2012Metric",-25.0000,19.0375,-90.0000,top
 "F2","1A","Fuse_0805_2012Metric",-25.0000,23.1000,90.0000,top
 "G***","LOGO","UST",3.7084,70.7136,0.0000,top
-"J1","Conn_02x05_Odd_Even","PinHeader_2x05_P2.54mm_Vertical",29.7258,103.6575,180.0000,top
+"J1","Conn_02x05_Odd_Even","PinHeader_2x05_P2.54mm_Vertical",23.8000,116.9000,-90.0000,top
 "J2","Barrel_Jack_Switch","BarrelJack_Horizontal",-28.1575,13.8000,90.0000,bottom
 "J3","HEADER_2x05_PARALLEL","Straight_2x05",-10.9442,95.0800,0.0000,top
 "J4","HEADER_2x01_PARALLEL","Straight_2x01",-3.8442,92.5000,0.0000,top
@@ -31,7 +37,7 @@ Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
 "J7","HEADER_2x01_PARALLEL","Straight_2x01",-3.8442,97.6000,0.0000,top
 "J8","u.fl","U.FL_Molex_MCRF_73412-0110_Vertical",7.9258,111.4000,0.0000,top
 "J9","HEADER_2x01_PARALLEL","Straight_2x01",18.1000,46.0700,90.0000,top
-"J10","Raspberry_Pi_4","PinHeader_2x20_P2.54mm_Vertical",-33.5750,114.0250,0.0000,top
+"J10","Raspberry_Pi_4","PinHeader_2x20_P2.54mm_Vertical",-33.5750,113.4600,0.0000,top
 "J11","RJ45_LED_Shielded","RJ45_Amphenol_RJHSE538X",22.7500,8.1000,180.0000,top
 "JP1","SolderJumper_3_Bridged12","SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm",31.4258,87.8000,0.0000,top
 "JP2","SolderJumper_2_Open","SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm",-20.7500,100.2000,180.0000,top
@@ -76,7 +82,7 @@ Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
 "TP3","TestPoint","TestPoint_Pad_D1.5mm",-8.2000,39.3000,0.0000,top
 "TP4","TestPoint","TestPoint_Pad_D1.5mm",33.8000,22.5000,0.0000,top
 "U1","TPSM33606S5QRDNRQ1","RDN0011A_TEX",-5.0500,35.2000,90.0000,top
-"U2","USBLC6-2SC6","SOT-23-6",22.7258,107.7500,0.0000,top
+"U2","USBLC6-2SC6","SOT-23-6",20.1500,110.5375,90.0000,top
 "U3","MIC5504-3.3YM5","SOT-23-5",29.3208,91.2575,-90.0000,top
 "U4","NEO-M9N","ublox_NEO",13.8258,95.0000,-90.0000,top
 "U5","ADM2483xRW","SOIC-16W_7.5x10.3mm_P1.27mm",9.0000,35.8500,-90.0000,top
