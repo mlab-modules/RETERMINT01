@@ -42,7 +42,8 @@ jobs:
           matrix = {'include': [
               {'name': p['name'], 'dir': p['dir'],
                'schema': p['dir'] + '/' + p['name'] + '.kicad_sch',
-               'board':  p['dir'] + '/' + p['name'] + '.kicad_pcb'}
+               'board':  p['dir'] + '/' + p['name'] + '.kicad_pcb',
+               'extra_layers': p.get('extra_layers', [])}
               for p in projects
           ]}
           print(json.dumps(matrix))
@@ -50,7 +51,7 @@ jobs:
           else
             PCB=$(find hw/sch_pcb -maxdepth 1 -name "*.kicad_pcb" | head -1)
             NAME=$(basename "$PCB" .kicad_pcb)
-            MATRIX="{\"include\":[{\"name\":\"$NAME\",\"dir\":\"hw/sch_pcb\",\"schema\":\"hw/sch_pcb/$NAME.kicad_sch\",\"board\":\"hw/sch_pcb/$NAME.kicad_pcb\"}]}"
+            MATRIX="{\"include\":[{\"name\":\"$NAME\",\"dir\":\"hw/sch_pcb\",\"schema\":\"hw/sch_pcb/$NAME.kicad_sch\",\"board\":\"hw/sch_pcb/$NAME.kicad_pcb\",\"extra_layers\":[]}]}"
           fi
           echo "matrix=$MATRIX" >> $GITHUB_OUTPUT
 
@@ -248,9 +249,35 @@ jobs:
           token: ${{ secrets.pat }}
           ref: ${{ github.head_ref }}
 
+      - name: "Prepare gerbers config"
+        id: gerber_config
+        env:
+          EXTRA_LAYERS: ${{ toJson(matrix.extra_layers) }}
+        run: |
+          python3 <<'PYEOF'
+          import json, os, yaml
+
+          extra_layers = json.loads(os.environ["EXTRA_LAYERS"])
+          src = "${{ env.kibot }}/gerbers.kibot.yaml"
+          config = src
+
+          if extra_layers:
+              with open(src) as f:
+                  cfg = yaml.safe_load(f)
+              for out in cfg["outputs"]:
+                  if out.get("type") == "gerber":
+                      out["layers"] += [l for l in extra_layers if l not in out["layers"]]
+              config = "${{ env.kibot }}/gerbers.gen.${{ matrix.name }}.kibot.yaml"
+              with open(config, "w") as f:
+                  yaml.safe_dump(cfg, f, sort_keys=False)
+
+          with open(os.environ["GITHUB_OUTPUT"], "a") as gh:
+              gh.write(f"config={config}\n")
+          PYEOF
+
       - uses: INTI-CMNB/KiBot@v2_dk10
         with:
-          config: ${{ env.kibot }}/gerbers.kibot.yaml
+          config: ${{ steps.gerber_config.outputs.config }}
           schema: ${{ matrix.schema }}
           board: ${{ matrix.board }}
           dir: ${{ env.dir }}_gerbers/${{ matrix.name }}
