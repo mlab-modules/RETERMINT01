@@ -307,7 +307,15 @@ jobs:
           token: ${{ secrets.pat }}
           ref: ${{ github.head_ref }}
 
+      - name: "Get MLAB 3D models library"
+        run: git clone --depth 1 https://github.com/MLAB-project/kicad-mlab.git mlab_lib
+
       - uses: INTI-CMNB/KiBot@v2_dk10
+        env:
+          KISYS3DMOD_MLAB: /github/workspace/mlab_lib/3Dmodels
+          MLAB_3DMODELS: /github/workspace/mlab_lib/3Dmodels
+          KISYS3MOD_MLAB: /github/workspace/mlab_lib/3Dmodels
+          KICAD_MLAB: /github/workspace/mlab_lib
         with:
           config: ${{ env.kibot }}/cad.kibot.yaml
           schema: ${{ matrix.schema }}
@@ -315,6 +323,11 @@ jobs:
           dir: ${{ env.dir }}_cad/${{ matrix.name }}
 
       - uses: INTI-CMNB/KiBot@v2_dk10
+        env:
+          KISYS3DMOD_MLAB: /github/workspace/mlab_lib/3Dmodels
+          MLAB_3DMODELS: /github/workspace/mlab_lib/3Dmodels
+          KISYS3MOD_MLAB: /github/workspace/mlab_lib/3Dmodels
+          KICAD_MLAB: /github/workspace/mlab_lib
         with:
           config: ${{ env.kibot }}/render.kibot.yaml
           schema: ${{ matrix.schema }}
