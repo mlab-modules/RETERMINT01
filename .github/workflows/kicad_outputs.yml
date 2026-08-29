@@ -25,6 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
+      names: ${{ steps.set-matrix.outputs.names }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -48,12 +49,20 @@ jobs:
           ]}
           print(json.dumps(matrix))
           ")
+            NAMES=$(python3 -c "
+          import yaml
+          with open('hw/sch_pcb/PCB_matrix.yaml') as f:
+              projects = yaml.safe_load(f)
+          print(' '.join(p['name'] for p in projects))
+          ")
           else
             PCB=$(find hw/sch_pcb -maxdepth 1 -name "*.kicad_pcb" | head -1)
             NAME=$(basename "$PCB" .kicad_pcb)
             MATRIX="{\"include\":[{\"name\":\"$NAME\",\"dir\":\"hw/sch_pcb\",\"schema\":\"hw/sch_pcb/$NAME.kicad_sch\",\"board\":\"hw/sch_pcb/$NAME.kicad_pcb\",\"extra_layers\":[]}]}"
+            NAMES="$NAME"
           fi
           echo "matrix=$MATRIX" >> $GITHUB_OUTPUT
+          echo "names=$NAMES" >> $GITHUB_OUTPUT
 
 
   ERC:
@@ -399,11 +408,14 @@ jobs:
   UPDATE_REPO:
     runs-on: ubuntu-latest
     name: Update repository
-    needs: [cad_postprocess, gerbers, schematics, placement, report, ibom]
+    # nad tagem neni kam commitovat, vysledky zustanou jen jako artefakty behu
+    if: ${{ github.ref_type == 'branch' }}
+    needs: [discover, cad_postprocess, gerbers, schematics, placement, report, ibom]
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref }}
+          # bez tohoto skonci checkout na odpojenem HEAD a commit nema kam jit
+          ref: ${{ github.head_ref || github.ref_name }}
           token: ${{ secrets.pat }}
 
       - run: |
@@ -419,45 +431,47 @@ jobs:
           rm -rf doc/gen || true
 
       - name: Extract to right position
+        env:
+          NAMES: ${{ needs.discover.outputs.names }}
         run: |
-          mkdir -p doc/gen doc/img/render hw/cam_profi
+          # zkopiruje obsah zdrojove slozky do cile, cilovou slozku vytvori predem
+          copy_into() {
+            src="$1"
+            dst="$2"
+            mkdir -p "$dst"
+            if [ -d "$src" ] && [ -n "$(ls -A "$src")" ]; then
+              cp -r "$src"/. "$dst"/
+            else
+              echo "::warning::Artefakt '$src' chybi nebo je prazdny, preskakuji"
+            fi
+          }
 
-          if [ -f hw/sch_pcb/PCB_matrix.yaml ]; then
-            NAMES=$(python3 -c "import yaml; [print(p['name']) for p in yaml.safe_load(open('hw/sch_pcb/PCB_matrix.yaml'))]")
+          for name in $NAMES; do
+            if [ -f hw/sch_pcb/PCB_matrix.yaml ]; then
+              gen="doc/gen/$name"
+              cam="hw/cam_profi/$name"
+            else
+              gen="doc/gen"
+              cam="hw/cam_profi"
+            fi
 
-            for name in $NAMES; do
-              mkdir -p doc/gen/$name/img doc/gen/$name/mesh
-              mkdir -p hw/cam_profi/$name/gbr hw/cam_profi/$name/assembly hw/cam_profi/$name/ibom
+            mkdir -p "$gen/img" "$gen/mesh" "$cam/gbr" "$cam/assembly" "$cam/ibom"
 
-              cp -r doc_img_$name/* doc/gen/$name/img/ || true
-              cp -r doc_cad_processed_$name/cad/* doc/gen/$name/ || true
-              cp -r hw_cam_profi_$name/* hw/cam_profi/$name/gbr/ || true
-              cp -r doc_sch_$name/docs/* doc/gen/$name/ || true
-              cp -r doc_xml_$name/* hw/cam_profi/$name/ || true
-              cp -r doc_sch_$name/img/pcb/* doc/gen/$name/img/ || true
-              cp -r doc_placement_$name/* hw/cam_profi/$name/assembly/ || true
-              cp -r doc_report_$name/* doc/gen/$name/ || true
-              cp -r doc_ibom_$name/docs/* hw/cam_profi/$name/ibom/ || true
+            copy_into "doc_img_$name"               "$gen/img"
+            copy_into "doc_cad_processed_$name/cad" "$gen"
+            copy_into "hw_cam_profi_$name"          "$cam/gbr"
+            copy_into "doc_sch_$name/docs"          "$gen"
+            copy_into "doc_xml_$name"               "$cam"
+            copy_into "doc_placement_$name"         "$cam/assembly"
+            copy_into "doc_report_$name"            "$gen"
+            copy_into "doc_ibom_$name/docs"         "$cam/ibom"
 
-              mv hw/cam_profi/$name/gbr/PnP/ hw/cam_profi/$name/assembly/ || true
-            done
-          else
-            REPO="${{ github.event.repository.name }}"
-            mkdir -p doc/gen/img doc/gen/mesh
-            mkdir -p hw/cam_profi/gbr hw/cam_profi/assembly hw/cam_profi/ibom
-
-            cp -r doc_img_$REPO/* doc/gen/img/ || true
-            cp -r doc_cad_processed_$REPO/cad/* doc/gen/ || true
-            cp -r hw_cam_profi_$REPO/* hw/cam_profi/gbr/ || true
-            cp -r doc_sch_$REPO/docs/* doc/gen/ || true
-            cp -r doc_xml_$REPO/* hw/cam_profi/ || true
-            cp -r doc_sch_$REPO/img/pcb/* doc/gen/img/ || true
-            cp -r doc_placement_$REPO/* hw/cam_profi/assembly/ || true
-            cp -r doc_report_$REPO/* doc/gen/ || true
-            cp -r doc_ibom_$REPO/docs/* hw/cam_profi/ibom/ || true
-
-            mv hw/cam_profi/gbr/PnP/ hw/cam_profi/assembly/ || true
-          fi
+            # PnP z gerberu patri k osazovacim podkladum, ne mezi gerbery
+            if [ -d "$cam/gbr/PnP" ]; then
+              copy_into "$cam/gbr/PnP" "$cam/assembly/PnP"
+              rm -rf "$cam/gbr/PnP"
+            fi
+          done
 
           rm -rf doc_img_* doc_cad_* doc_cad_processed_* hw_cam_profi_* doc_sch_* \
                  doc_placement_* doc_xml_* doc_report_* doc_ibom_* || true
